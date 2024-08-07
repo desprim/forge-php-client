@@ -1,5 +1,5 @@
 {
-  "name": "autodesk/forge-client",
+  "name": "desprim/forge-client",
   "description": "",
   "keywords": [
     "swagger",
@@ -15,12 +15,27 @@
       "homepage": "https://github.com/Autodesk-Forge"
     }
   ],
+  "repositories": [{
+      "type": "package",
+      "package": {
+          "name": "desprim/autodesk-core",
+          "version": "dev-new-oauth2-endpoints",
+          "source": {
+              "url": "https://github.com/desprim/autodesk-core.git",
+              "type": "git",
+              "reference": "new-oauth2-endpoints"
+          },
+          "autoload": {
+              "classmap": [""]
+          }
+      }
+  }],
   "require": {
     "php": ">=5.4",
     "ext-curl": "*",
     "ext-json": "*",
     "ext-mbstring": "*",
-    "autodesk/core": "^1.0"
+    "desprim/autodesk-core": "dev-new-oauth2-endpoints"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.8",
